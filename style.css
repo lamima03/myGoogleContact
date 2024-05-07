@@ -1,0 +1,25 @@
+/*******************contenu du menu burger*****************/
+
+.containerDeroule__left{
+    display: flex;
+    margin: 1rem;
+    justify-content: flex-start;
+    width: 20%;
+}
+.Contact{
+    color:rgb (25,91,197) ;
+}
+.padding{
+    margin-left: 1rem; 
+}
+
+
+.container__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.containerDeroule{
+    display: flex;
+    flex-direction: column;
+}
