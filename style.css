@@ -4,7 +4,7 @@
     display: flex;
     margin: 1rem;
     justify-content: flex-start;
-    width: 20%;
+    
 }
 .Contact{
     color:rgb (25,91,197) ;
@@ -13,13 +13,81 @@
     margin-left: 1rem; 
 }
 
-
-.container__top{
+/**********************************mon header**************************************/
+.container__header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-between;
+    height: 48px;
+    width: 100%;
+    padding: 2px;
+
+
 }
-.containerDeroule{
+.imgContact{
+    width: 40px;
+    height: 44px;
+}
+
+.header__icon{
+    width: 28px;
+    height:28px;
+    color: rgb(96, 99, 103);
+    
+}
+.formSearch{
     display: flex;
-    flex-direction: column;
+    background: rgb(242, 243, 244);
+    border-top-right-radius: 7px ;
+    border-top-left-radius: 7px;
+    width: 35rem;
+    box-shadow: 15px;
+    
+    
+}
+.searchBar{
+    width: 30 rem;
+    display: flex;
+
+
+}
+input {
+    border: none;
+    width: 50%;
+    background: none;
+}
+.containerDeroule__left{
+    align-items: center;
+    
+   
+    
+}
+.contact__header{
+    justify-content: space-between;
+
+}
+.header__icon, .imgContact{
+    padding: 12px;
+    margin: 0ps, 4px;
+}
+/*******************************************fin de mon header**********************/
+
+
+.mySection{
+    display: flex;
+  
+    
+}
+.container__right{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.icon{
+    width: 28px;
+    height: 28px;
+}
+
+div{
+ 
 }
