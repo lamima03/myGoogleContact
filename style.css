@@ -1,47 +1,35 @@
-/*******************contenu du menu burger*****************/
-
-.containerDeroule__left{
-    display: flex;
-    margin: 1rem;
-    justify-content: flex-start;
+body{
+    padding: 0px;
+    background: rgb(246, 248, 252);
     
 }
-.Contact{
-    color:rgb (25,91,197) ;
-}
-.padding{
-    margin-left: 1rem; 
-}
-
 /**********************************mon header**************************************/
 .container__header{
     display: flex;
     align-items: center;
-    justify-content:space-between;
     height: 48px;
     width: 100%;
     padding: 2px;
+    
 
 
+}
+.container__header--width{
+    margin-right: 6rem;
 }
 .imgContact{
     width: 40px;
     height: 44px;
 }
 
-.header__icon{
-    width: 28px;
-    height:28px;
-    color: rgb(96, 99, 103);
-    
-}
+
 .formSearch{
     display: flex;
     background: rgb(242, 243, 244);
-    border-top-right-radius: 7px ;
-    border-top-left-radius: 7px;
+    border-radius: 7px ;
     width: 35rem;
     box-shadow: 15px;
+    margin-right: 17rem;
     
     
 }
@@ -51,43 +39,206 @@
 
 
 }
-input {
+.inputSerch{
     border: none;
     width: 50%;
     background: none;
+
+        
 }
-.containerDeroule__left{
+
+.contact__header, .containerDeroule__left{
+    display: flex;
+    margin-left: 1rem;
+    position: relative;
     align-items: center;
     
+
+
+}
+.header__icon, .imgContact, .left__icon{
+    padding: 10px;
+    margin: 0ps, 2px;
+    width: 28px;
+    height:28px;
+    color: rgb(96, 99, 103);
+        
+
+}
+/***************************************fin de mon header**********************/
+/*******************contenu du menu burger*****************/
+
+.containerDeroule__left{
+    display: flex;
+    margin: 1rem;
+      
+}
+.Contact{
+    color:rgb (25,91,197) ;
+}
+.sectionleft{
+    background: yellow;
+    width:18rem;
+}
+.containerDeroule__left--bold{
+    font-weight: bold;
+}
+
+.hideSection {
+    display: none;
+}
+
+
+
+    .containerDeroule__left-BGblue{
+        background:rgb(187, 220, 249);
+    }
+    .containerDeroule__left-borderRadius{
+        border-radius: 10px;
+    }
+    .containerDeroule__left--bgbluecont{
+        border-radius: 25px;
+    }
+    .buttun__creerContact{
+        display: flex;
+        align-items: center;
+        width: 10rem;
+        margin: 1rem;
+
+    }
+    .containerDeroule__options{
+        width: 100%;
+    }
+    .containerDeroule__left--spaceBetwin{
+        display: flex;
+        justify-content: space-between;
+    }       
+
+/*********************************************fin deroulement du menu burger******************************************/
+
+/*********************** my section right*******************************/
+
+.mySections{
+    display: flex;
+    
+    width: 100%;
+}
+.item{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    background:white;
+    width: 100%;
+    padding: 14px;
    
     
-}
-.contact__header{
-    justify-content: space-between;
 
-}
-.header__icon, .imgContact{
-    padding: 12px;
-    margin: 0ps, 4px;
-}
-/*******************************************fin de mon header**********************/
-
-
-.mySection{
-    display: flex;
-  
     
+}
+.item__list{
+    list-style: none;
+    background:green;
+    margin-right: 8rem;
+   
+}
+
+.container__right{
+    width: 100%;
 }
 .container__right{
     display: flex;
     justify-content: space-between;
     
 }
-.icon{
-    width: 28px;
-    height: 28px;
+.sectionRight{
+   background:rgb(255, 255, 255);
+   margin-left:3px;
+   width: 70rem;
+   border-radius: 7px;
+}
+.contact__right{
+    margin-left: 1rem;
 }
 
-div{
- 
+.hideNewContactSection {
+    display: none;
 }
+
+.rightSection {
+    height: 100%;
+    background-color: #fff;
+}
+
+/*********************************************** fin     my  section right *********************************************************/
+/****************************************   debut new contact      ****************************************/
+.newcontact{
+    width: 50%;
+}
+.newForm{
+    width: 80%;
+   
+}
+.inputForm{
+    height: 2rem;
+    width: 100%;
+}
+.divNewForm{
+    margin-bottom: 1rem;
+    
+}
+.inputForm--separateur{
+    margin-bottom: 0.5rem;
+}
+.divNewForm--form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgb(238, 242, 247);
+}
+
+.divNewForm--borderRadius{
+    border-radius: 20px;
+}
+.divNewForm--BGblue{
+    background:rgb(238, 242, 247);
+}
+.inputForm__phoneNumber{
+    width: 80%;
+    
+    
+}
+.inputForm__contrycode{
+    width: 20%;
+
+    
+}
+.inputContry {
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.newcontact--profil{
+    display: block;
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    text-align:center ;
+    justify-content: center;
+    border-radius: 50%;
+    background: gray;
+    
+}
+.newcontactProfil--profil{
+    width: 100%;
+    background: red;
+    
+    
+}
+.newcontactPlus--profil{
+    width: 28px;
+    height:28px;
+    background: #000;
+}
+
+/****************************************   fin new contact      ****************************************/
