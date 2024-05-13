@@ -78,7 +78,7 @@ body{
 }
 .sectionleft{
     background: yellow;
-    width:18rem;
+    width:15%;
 }
 .containerDeroule__left--bold{
     font-weight: bold;
@@ -120,8 +120,9 @@ body{
 
 .mySections{
     display: flex;
+    width:100%;
+    background: red;
     
-    width: 100%;
 }
 .item{
     display: flex;
@@ -137,8 +138,8 @@ body{
 }
 .item__list{
     list-style: none;
-    background:green;
     margin-right: 8rem;
+    width: 100%;
    
 }
 
@@ -149,11 +150,13 @@ body{
     display: flex;
     justify-content: space-between;
     
+    width: 100;
+    
 }
 .sectionRight{
    background:rgb(255, 255, 255);
    margin-left:3px;
-   width: 70rem;
+   width:100%;
    border-radius: 7px;
 }
 .contact__right{
@@ -166,7 +169,9 @@ body{
 
 .rightSection {
     height: 100%;
-    background-color: #fff;
+    width: 85%;
+    
+    /* border: solid,black, 1rem; */
 }
 
 /*********************************************** fin     my  section right *********************************************************/
@@ -226,19 +231,23 @@ body{
     text-align:center ;
     justify-content: center;
     border-radius: 50%;
-    background: gray;
+    
     
 }
 .newcontactProfil--profil{
     width: 100%;
-    background: red;
+    
     
     
 }
 .newcontactPlus--profil{
     width: 28px;
     height:28px;
-    background: #000;
+    
 }
 
 /****************************************   fin new contact      ****************************************/
+.bigContainer{
+    
+
+}

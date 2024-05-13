@@ -24,3 +24,9 @@ const showNewContactSection= (target)=> {
     cible.classList.remove('hideNewContactSection');
     cible.classList.add('newcontact');
 }
+ const createContactForm= document.getElementById('form');
+ createContactForm.addEventListener('submit', (event)=>{
+    const data = new FormData(event.target)
+    const formulaire = Object.fromEntries(data.entries())//.fromEntries à partir des entrees//
+    console.log(formulaire);
+ })
