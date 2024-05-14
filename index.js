@@ -30,3 +30,26 @@ const showNewContactSection= (target)=> {
     const formulaire = Object.fromEntries(data.entries())//.fromEntries à partir des entrees//
     console.log(formulaire);
  })
+
+//  <tr class="table__lign">
+//  <td class="item__tab">jemima</td>
+//  <td class="item__tab">jemiMukanza@gmail.com</td>
+//  <td class="item__tab">0810640653</td>
+//  <td class="item__tab">DG</td>
+//  <td class="item__tab">hiegbzds,bl;</td>
+// </tr>
+
+
+function addcontact(){
+    const tr__item = document.createElement('tr');
+    tr__item.setAttribute("class","table__lign");
+
+    const td__item = document.createElement("td")
+    td__item.setAttribute("class","item__tab")
+    td__item.textContent = formulaire.firsName
+
+    let container__right= document.querySelector('.container__right')
+
+    tr__item.appendChild(td__item)
+    container__right.appendChild(tr__item);
+}
