@@ -8,7 +8,7 @@
 </head>
 <body>
     <!--Mon grand conteneur contact avec toutes les sections-->
-    <div class = bigContainer>
+    <div class = "main">
 
         <header class="container__header container__header--width" id="header">
             
@@ -55,7 +55,7 @@
                             <div>contacts</div>
                             <div id="contactNumber"> </div>
                         </button> -->
-                       <div class = "containerDeroule__left containerDeroule__left-BGblue containerDeroule__left--bgbluecont containerDeroule__left--bold" > 
+                       <div class = "containerDeroule__left buttonContactList containerDeroule__left-BGblue containerDeroule__left--bgbluecont containerDeroule__left--bold" > 
                            <img src="./myIcons/contact.png" alt="" class="left__icon">
                            <div>contacts</div>
                            <div id="contactNumber"> </div>
@@ -84,12 +84,9 @@
                             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="left__icon"  width="1em" height="1em" viewBox="0 0 24 24"><path fill="black" d="M7.616 20q-.672 0-1.144-.472T6 18.385V6H5V5h4v-.77h6V5h4v1h-1v12.385q0 .69-.462 1.153T16.384 20zM17 6H7v12.385q0 .269.173.442t.443.173h8.769q.23 0 .423-.192t.192-.424zM9.808 17h1V8h-1zm3.384 0h1V8h-1zM7 6v13z"/></svg></div>
                             <div>corbeille</div>
                        </div> 
-                       <div class="containerDeroule__left containerDeroule__left--spaceBetwin">
-                        <div>Libellés</div>
-                        <img src="./myIcons/plus.png" alt=""class="left__icon " >
-                           
-                           
-                           
+                       <div class="containerDeroule__left containerDeroule__left--spaceBetwin  "  >
+                            <div>Libellés</div>
+                            <img src="./myIcons/plus.png" alt=""class="left__icon button__libelle " id="Libellé__botton">   
                        </div>
                    </div>
    
@@ -97,10 +94,11 @@
                 </section>
    
                 <!--************************************fin de ma section left****************************************-->
+
+                 <!--$$$$$$$$$$$$$$$$$$$$$$$$$$ debut de la section new contact $$$$$$$$$$$$$$$$-->
                 <div id="rightSection" class="rightSection">
-                    <section class="sectionRight" id="mainSection" >  
-                        
-                       
+                    <section class="contactList" id="mainSection" >  
+                    
                         <table class ="table container__right">
                             <caption class="caption">
                                 Contacts
@@ -122,28 +120,22 @@
                             </tr>
                             
                         </table>
-
-
-
-                        
-                       
-                       
                     </section>
-                    <section class="hideNewContactSection" id="newContactSection">
-                        <form id="form">
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$ fin de la section list contact  $$$$$$$$$$$$$$$$-->
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$debut  de la section new contact $$$$$$$$$$$$$$$$-->
+                    <section class="hideNewContactSection " id="newContactSection">
+                        <form id="form" action="get">
                             <div class="header__newContact">
                                 <img src="./myIcons/arrow.png" alt="" class="arrow__newContact">
-                                <button class="submit__newContactbutton" id="submitionButton" name="submitionButton">Enregistrer</button> 
+                                <button class="submit__newContactbutton submissionButtonNew" id="submissionButton" name="submissionButton">Enregistrer</button> 
                             </div>
                              
                             <div class="newcontact--profil">
                                 <img src="./myIcons/silouhaiteProfil.png" alt="" class="newcontactProfil--profil">
-                                
-                                 
                             </div>
-                
-                            
-                
+
                             <div class="divNewForm">
                                 <input type="text" placeholder="+ Libellé" >
                             </div>
@@ -209,10 +201,35 @@
                 
                         </form>
                     </section>
-                </div>
-                
-       
 
+                    <!--$$$$$$$$$$$$$$$$$$$$$$$$$$fin de la section new contact $$$$$$$$$$$$$$$$-->
+
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$debut de la section libellée $$$$$$$$$$$$$$$$-->
+                    <section class="libeleeSection " id="champLibele">
+                        <h1>Créer un libellé</h1>
+                        <form action="get" class="inputLibellée" >
+                            <div>
+                                <fieldset class="inputLibellée__champ">
+                                    <legend>Nouveau libellé</legend>
+                                    <input type="text" class="inputLibelee" >
+                                </fieldset>
+                                
+                                
+                                
+                            </div>
+
+                        </form>
+                        <div class="libeléeOption">
+                            <p class="libeléeOption__p">Non, ne rien faire</p>
+                            <p class="libeléeOption__p">Enregistrer</p>
+                        </div>
+
+
+                    </section>
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$fin de la section new libellee $$$$$$$$$$$$$$$$-->
+                </div>
 
         </div>
     </div>

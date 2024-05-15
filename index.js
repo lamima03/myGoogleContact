@@ -22,7 +22,7 @@ const showNewContactSection= (target)=> {
     element.classList.add("hideSection");
     const cible = document.getElementById(target);
     cible.classList.remove('hideNewContactSection');
-    cible.classList.add('newcontact');
+    // cible.classList.add('newcontact');
 }
  const createContactForm= document.getElementById('form');
  createContactForm.addEventListener('submit', (event)=>{
@@ -50,6 +50,35 @@ function addcontact(){
 
     let container__right= document.querySelector('.container__right')
 
-    tr__item.appendChild(td__item)
+    tr__item.appendChild(td__item);
     container__right.appendChild(tr__item);
 }
+
+
+function showMyListContact(){
+    const contactList = document.getElementById('mainSection');
+    contactList.classList.remove("hideSection");
+    const newContactSection = document.getElementById("newContactSection")
+    newContactSection.classList.add('hideNewContactSection');
+    newContactSection.classList.add('newcontact');
+}
+
+const buttonContactList = document.querySelector(".buttonContactList");
+buttonContactList.addEventListener("click", showMyListContact);
+
+
+const submissionButton = document.querySelector(".submissionButtonNew");
+submissionButton.addEventListener("click", addcontact );
+
+function showlibeleesection(){
+    const newLibellee = document.getElementById('champLibele');
+    newLibellee.classList.add("libeleeSection");
+
+    // const ourLibelée = document.getElementById("newContactSection")
+    // newContactSection.classList.add('hideNewContactSection');
+    // newContactSection.classList.add('newcontact');
+}
+const button__libelle = document. querySelector(".button__libelle");
+button__libelle.addEventListener("click",showlibeleesection )
+
+

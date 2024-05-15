@@ -184,11 +184,12 @@ body{
 width: 100%;
     
 }
-.sectionRight{
+.contactList{
    background:rgb(255, 255, 255);
    margin-left:3px;
    width:100%;
    border-radius: 7px;
+   
 }
 .contact__right{
     margin-left: 1rem;
@@ -201,6 +202,7 @@ width: 100%;
 .rightSection {
     height: 100%;
     width: 85%;
+    
     
     /* border: solid,black, 1rem; */
 }
@@ -301,7 +303,50 @@ width: 100%;
 }
 
 /****************************************   fin new contact      ****************************************/
-.bigContainer{
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  debut libellee section   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+.libeleeSection{
+    width: 30%;
+    background: rgb(239, 243, 250);
+    background:white;
+    border-radius: 30px;
+    
+}
+    
     
 
+.libeleeSectionDisplay{
+    display: none;
 }
+
+
+.inputLibellée{
+    border-color: rgb(86, 125, 212);
+    color: rgb(86, 125, 212);
+    padding-bottom: 2rem;
+
+}
+
+.libeléeOption{
+    color: rgb(86, 125, 212);
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+.libeléeOption__p{
+    padding-right: 1rem;
+}
+.button__libelle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.inputLibellée__champ{
+    color-interpolation-filters: beige;
+}
+.inputLibelee{
+    width: 100%;
+    border: none;
+}
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  fin libellee section   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
