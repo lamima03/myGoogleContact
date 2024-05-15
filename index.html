@@ -86,7 +86,7 @@
                        </div> 
                        <div class="containerDeroule__left containerDeroule__left--spaceBetwin  "  >
                             <div>Libellés</div>
-                            <img src="./myIcons/plus.png" alt=""class="left__icon button__libelle " id="Libellé__botton">   
+                            <img src="./myIcons/plus.png" alt=""class="left__icon button__libelle " id="Libellé__botton" onclick="showlibeleesection('champLibele')">   
                        </div>
                    </div>
    
@@ -206,23 +206,21 @@
 
 
                      <!--$$$$$$$$$$$$$$$$$$$$$$$$$$debut de la section libellée $$$$$$$$$$$$$$$$-->
-                    <section class="libeleeSection " id="champLibele">
+                    <section class="libeleeSectionDisplay" id="champLibele">
                         <h1>Créer un libellé</h1>
-                        <form action="get" class="inputLibellée" >
+                        <form class="inputLibellée" >
                             <div>
                                 <fieldset class="inputLibellée__champ">
                                     <legend>Nouveau libellé</legend>
                                     <input type="text" class="inputLibelee" >
                                 </fieldset>
-                                
-                                
-                                
+                                  
                             </div>
 
                         </form>
                         <div class="libeléeOption">
-                            <p class="libeléeOption__p">Non, ne rien faire</p>
-                            <p class="libeléeOption__p">Enregistrer</p>
+                            <p  id="annulLibelee"  class="libeléeOption__p libeléeOption__cancel " onclick="cancelLibeleeSection('champLibele')">Non, ne rien faire</p>
+                            <p class="libeléeOption__p libeléeOption__enregistre">Enregistrer</p>
                         </div>
 
 

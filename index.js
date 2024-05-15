@@ -22,7 +22,6 @@ const showNewContactSection= (target)=> {
     element.classList.add("hideSection");
     const cible = document.getElementById(target);
     cible.classList.remove('hideNewContactSection');
-    // cible.classList.add('newcontact');
 }
  const createContactForm= document.getElementById('form');
  createContactForm.addEventListener('submit', (event)=>{
@@ -66,19 +65,26 @@ function showMyListContact(){
 const buttonContactList = document.querySelector(".buttonContactList");
 buttonContactList.addEventListener("click", showMyListContact);
 
-
+//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%gestion de libele%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 const submissionButton = document.querySelector(".submissionButtonNew");
 submissionButton.addEventListener("click", addcontact );
 
-function showlibeleesection(){
+
+
+
+
+const showlibeleesection = (target)=> {
     const newLibellee = document.getElementById('champLibele');
-    newLibellee.classList.add("libeleeSection");
-
-    // const ourLibelée = document.getElementById("newContactSection")
-    // newContactSection.classList.add('hideNewContactSection');
-    // newContactSection.classList.add('newcontact');
+    newLibellee.classList.remove("libeleeSectionDisplay");
+    const cible = document.getElementById(target);
+    cible.classList.add('libeleeSection');
+    
 }
-const button__libelle = document. querySelector(".button__libelle");
-button__libelle.addEventListener("click",showlibeleesection )
 
 
+const cancelLibeleeSection = (target)=>{
+    const annulLibelee = document.getElementById('champLibele');
+    annulLibelee.classList.add('libeleeSectionDisplay')
+    
+
+}
