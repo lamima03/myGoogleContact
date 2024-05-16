@@ -84,7 +84,9 @@ const showlibeleesection = (target)=> {
 
 const cancelLibeleeSection = (target)=>{
     const annulLibelee = document.getElementById('champLibele');
-    annulLibelee.classList.add('libeleeSectionDisplay')
+    annulLibelee.classList.add('libeleeSectionDisplay');
+    const inputLibelee = document.querySelector('.inputLibelee');
+    inputLibelee.value='';
     
 
 }
