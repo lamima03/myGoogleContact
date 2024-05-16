@@ -39,7 +39,7 @@
 <!--**************************    debut de ma section left***************************************-->
         <div class="mySections">    
                 <section class="sectionleft" id="sideBar">
-                 <!--le div qui contient  le menu bur-->
+                 <!--le div qui contient  le menu burger-->
         
    
                    <button onclick="showNewContactSection('newContactSection')" class = "buttun__creerContact containerDeroule__left-BGblue  containerDeroule__left-borderRadius">
@@ -206,7 +206,7 @@
 
 
                      <!--$$$$$$$$$$$$$$$$$$$$$$$$$$debut de la section libellée $$$$$$$$$$$$$$$$-->
-                    <section class="libeleeSectionDisplay" id="champLibele">
+                    <section class="libeleeSection libeleeSectionDisplay " id="champLibele">
                         <h1>Créer un libellé</h1>
                         <form class="inputLibellée" >
                             <div>
@@ -220,7 +220,7 @@
                         </form>
                         <div class="libeléeOption">
                             <p  id="annulLibelee"  class="libeléeOption__p libeléeOption__cancel " onclick="cancelLibeleeSection('champLibele')">Non, ne rien faire</p>
-                            <p class="libeléeOption__p libeléeOption__enregistre">Enregistrer</p>
+                            <p id="saveNewlibelee" class="libeléeOption__p libeléeOption__enregistre" onclick="savelibelee('saveNewlibelee')">Enregistrer</p>
                         </div>
 
 
@@ -230,6 +230,7 @@
                 </div>
 
         </div>
+
     </div>
     <script src="./index.js"></script>
 </body>

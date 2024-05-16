@@ -12,10 +12,7 @@ const hideSideBar = (target) => {
 let form = document.getElementById('form');
 const inputs = form.elements
 
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    console.log(inputs.name);
-})
+
 
 const showNewContactSection= (target)=> {
     const element = document.getElementById('rightSection').firstElementChild;
@@ -23,34 +20,31 @@ const showNewContactSection= (target)=> {
     const cible = document.getElementById(target);
     cible.classList.remove('hideNewContactSection');
 }
+
+let formulaire =null;
  const createContactForm= document.getElementById('form');
- createContactForm.addEventListener('submit', (event)=>{
-    const data = new FormData(event.target)
-    const formulaire = Object.fromEntries(data.entries())//.fromEntries à partir des entrees//
-    console.log(formulaire);
- })
-
-//  <tr class="table__lign">
-//  <td class="item__tab">jemima</td>
-//  <td class="item__tab">jemiMukanza@gmail.com</td>
-//  <td class="item__tab">0810640653</td>
-//  <td class="item__tab">DG</td>
-//  <td class="item__tab">hiegbzds,bl;</td>
-// </tr>
+ 
 
 
-function addcontact(){
+
+function addcontact(formulaire){
+    console.log("addcontact :",formulaire)
     const tr__item = document.createElement('tr');
     tr__item.setAttribute("class","table__lign");
 
     const td__item = document.createElement("td")
     td__item.setAttribute("class","item__tab")
-    td__item.textContent = formulaire.firsName
+    td__item("prenon").textContent = formulaire.firsName;
+    td__item("nome").textContent = formulaire.Name;
+    td__item("entreprise").textContent = formulaire.Entreprise;
+    td__item("Email").textContent = formulaire.Email;
+    td__item("Pays").textContent = formulaire.Pays;
 
     let container__right= document.querySelector('.container__right')
 
-    tr__item.appendChild(td__item);
-    container__right.appendChild(tr__item);
+    tr__item.appendChild(td__item("prenon"),td__item("nome"),td__item("entreprise"), td__item("Email"),td__item("Pays"));
+
+    container__right.append(td__item("prenon"),td__item("nome"),td__item("entreprise"), td__item("Email"),td__item("Pays"));
 }
 
 
@@ -63,11 +57,9 @@ function showMyListContact(){
 }
 
 const buttonContactList = document.querySelector(".buttonContactList");
-buttonContactList.addEventListener("click", showMyListContact);
 
-//%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%gestion de libele%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 const submissionButton = document.querySelector(".submissionButtonNew");
-submissionButton.addEventListener("click", addcontact );
+
 
 
 
@@ -77,16 +69,39 @@ const showlibeleesection = (target)=> {
     const newLibellee = document.getElementById('champLibele');
     newLibellee.classList.remove("libeleeSectionDisplay");
     const cible = document.getElementById(target);
-    cible.classList.add('libeleeSection');
+    cible.classList.add('libeleeSection');    
     
 }
 
 
-const cancelLibeleeSection = (target)=>{
+const cancelLibeleeSection = ()=>{
     const annulLibelee = document.getElementById('champLibele');
     annulLibelee.classList.add('libeleeSectionDisplay');
     const inputLibelee = document.querySelector('.inputLibelee');
     inputLibelee.value='';
     
-
 }
+function deletelibeleeSection (){
+    const libeleeSection = document.querySelector(".main");
+    libeleeSection.classList.add("libeleeSection");
+}
+
+
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$tous  mes evenement $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+createContactForm.addEventListener('submit', (event)=>{
+    const data = new FormData(event.target)
+    formulaire = Object.fromEntries(data.entries())//.fromEntries à partir des entrees//
+    console.log(formulaire);
+    addcontact(formulaire)
+ })
+ 
+buttonContactList.addEventListener("click", showMyListContact);
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(inputs.name);
+})
+
