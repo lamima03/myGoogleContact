@@ -125,22 +125,27 @@
                      <!--$$$$$$$$$$$$$$$$$$$$$$$$$$ fin de la section list contact  $$$$$$$$$$$$$$$$-->
 
                      <!--$$$$$$$$$$$$$$$$$$$$$$$$$$debut  de la section new contact $$$$$$$$$$$$$$$$-->
-                    <section class="hideNewContactSection " id="newContactSection">
+                    <section class="hideNewContactSection  " id="newContactSection">
                         <form id="form" action="get">
                             <div class="header__newContact">
                                 <img src="./myIcons/arrow.png" alt="" class="arrow__newContact">
-                                <button class="submit__newContactbutton submissionButtonNew" id="submissionButton" name="submissionButton">Enregistrer</button> 
+                                <div class="header__newContact--starButton">
+                                    <img src="./myIcons/star.png" alt="">
+                                    <button class="submit__newContactbutton submissionButtonNew" id="submissionButton" name="submissionButton">Enregistrer</button> 
+                                </div>
+                                
                             </div>
                              
-                            <div class="newcontact--profil">
-                                <img src="./myIcons/silouhaiteProfil.png" alt="" class="newcontactProfil--profil">
+                            <div class="newcontact--profil hideNewContactSection__padding">
+                                <img src="./myIcons/silouhaiteProfil.png" class="newcontactProfil--profil">
+                                <img src="./myIcons/plusBlanc.png" alt="" class="newcontact__plus--profil">
                             </div>
 
-                            <div class="divNewForm">
-                                <input type="text" placeholder="+ Libellé"  id="libellee">
+                            <div class="divNewForm hideNewContactSection__padding ">
+                                <button id="libellee" class="divNewForm__libeleeform"> <img src="./myIcons/blue plus.svg" alt=""> Libellé</button>
                             </div>
-                            <div class="divNewForm">
-                                <div>
+                            <div class="divNewForm hideNewContactSection__padding">
+                                <div cl>
                                     <img src="./myIcons/contact.png" alt="" class="imgContact">
                                 </div>
                                 
@@ -151,7 +156,7 @@
                                
 
                             </div>
-                            <div class="divNewForm">
+                            <div class="divNewForm hideNewContactSection__padding">
                                 <div>
                                     <img src="./myIcons/Entreprise.png" alt="" class="imgContact">
                                 </div>
@@ -162,7 +167,7 @@
                                 </div>
                                 
                             </div>
-                            <div class="divNewForm ">
+                            <div class="divNewForm hideNewContactSection__padding">
                                 <div>
                                     <img src="./myIcons/mail.png" alt="" class="imgContact">
                                 </div>
@@ -180,11 +185,11 @@
                                 
                             </div>
                             
-                            <div class="divNewForm inputContry inputForm--separateur ">
+                            <div class="divNewForm inputContry inputForm--separateur hideNewContactSection__padding">
                                 <div>
                                     <img src="./myIcons/call.png" alt="">
                                 </div>
-                                <div>
+                                <div class="FormZonePays inputForm inputForm--separateur">
                                     <select name="pays" id="" >
                                         <option value="rdc"> RDcongo</option>
                                         <option value="canada">Canada</option>
@@ -192,7 +197,7 @@
                                         <option value="state">USA</option>
                                         <option value="angola">Angola</option>
                                     </select>
-                                    <input type="number" name="" id="phone" placeholder="Téléphone " class="inputForm__phoneNumber inputForm">
+                                    <input type="number" name="" id="phone" placeholder="Téléphone " class="inputForm__phoneNumber inputForm inputForm--separateur">
 
                                 </div>
                             </div>
