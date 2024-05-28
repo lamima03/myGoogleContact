@@ -77,7 +77,6 @@ body{
     color:rgb (25,91,197) ;
 }
 .sectionleft{
-    background: yellow;
     width:15%;
 }
 .containerDeroule__left--bold{
@@ -196,6 +195,8 @@ width: 100%;
 .rightSection {
     height: 100%;
     width: 85%;
+    background: white;
+    border-radius: 10px;
     
     
     /* border: solid,black, 1rem; */
@@ -224,14 +225,14 @@ width: 100%;
 }
 .inputForm{
     height: 2rem;
-    background: red;
+    
     width: 40rem;
 
 }
 .divNewForm{
     margin-bottom: 1rem;
     display: flex;
-    background: #000;
+    
     
 }
 .inputForm--separateur{

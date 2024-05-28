@@ -73,6 +73,9 @@ function addcontact() {
     tr__item.append(td__nomComplet, td__Email, td__phone, td__fonction, td__libelee);
     container__right.appendChild(tr__item);
 
+    leftSection.append(td__libelee)
+
+
     for (let index = 0; index <mesInput.length; index++) {
         mesInput[index].value= "";
         
