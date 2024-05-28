@@ -3,10 +3,20 @@ const nameInput = document.querySelector("#name");
 const entrepriseInput = document.querySelector("#entreprise");
 const fonctionInput = document.querySelector("#fonction");
 const emailInput = document.querySelector("#email");
-const phoneInput = document.querySelector("#phone")
-const libeleeInput = document.querySelector("#libellee")
+const phoneInput = document.querySelector("#phone");
+const libeleeInput = document.querySelector("#libellee");
+let leftSection = document.querySelector(".sectionleft");
+const buttonContactList = document.querySelector(".buttonContactList");
+const submissionButton = document.querySelector(".submissionButtonNew");
+let form = document.getElementById('form');
+const inputs = form.elements;
+let formulaire = null;
+const createContactForm = document.getElementById('form');
+const mesInput = document.querySelectorAll(".inputForm")
 
 
+
+//menu burger
 const hideSideBar = (target) => {
     let cible = document.getElementById(target);
     const isHide = cible.classList.contains('hideSection');
@@ -19,28 +29,13 @@ const hideSideBar = (target) => {
     }
 }
 
-
-
-
-
-let form = document.getElementById('form');
-const inputs = form.elements
-
-
-
 const showNewContactSection = (target) => {
     const element = document.getElementById('rightSection').firstElementChild;
     element.classList.add("hideSection");
     const cible = document.getElementById(target);
     cible.classList.remove('hideNewContactSection');
 }
-
-let formulaire = null;
-const createContactForm = document.getElementById('form');
-
-
-
-
+removeEventListener()
 function addcontact() {
     // <tr class="table__lign">
     //     <td class="item__tab">jemima</td>
@@ -77,6 +72,11 @@ function addcontact() {
 
     tr__item.append(td__nomComplet, td__Email, td__phone, td__fonction, td__libelee);
     container__right.appendChild(tr__item);
+
+    for (let index = 0; index <mesInput.length; index++) {
+        mesInput[index].value= "";
+        
+    }
 }
 
 
@@ -87,17 +87,9 @@ function showMyListContact() {
     contactList.classList.remove("hideSection");
     const newContactSection = document.getElementById("newContactSection")
     newContactSection.classList.add('hideNewContactSection');
-    newContactSection.classList.add('newcontact');
+    newContactSection.classList.add('newcontact') ;
+    
 }
-
-const buttonContactList = document.querySelector(".buttonContactList");
-
-const submissionButton = document.querySelector(".submissionButtonNew");
-
-
-
-
-
 
 const showlibeleesection = (target) => {
     const newLibellee = document.getElementById('champLibele');
@@ -105,7 +97,10 @@ const showlibeleesection = (target) => {
     const cible = document.getElementById(target);
     cible.classList.add('libeleeSection');
 
+
 }
+
+
 
 
 const cancelLibeleeSection = () => {
@@ -119,14 +114,6 @@ function deletelibeleeSection() {
     const libeleeSection = document.querySelector(".main");
     libeleeSection.classList.add("libeleeSection");
 }
-
-
-
-
-libeleeInput = document.querySelector("#libellee");
-document.addEventListener("click", function(event){
-    libeleeInput.remove(event);
-})
 
 
 
