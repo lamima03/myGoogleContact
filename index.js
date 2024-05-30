@@ -35,7 +35,7 @@ const showNewContactSection = (target) => {
     const cible = document.getElementById(target);
     cible.classList.remove('hideNewContactSection');
 }
-removeEventListener()
+// removeEventListener()
 function addcontact() {
     // <tr class="table__lign">
     //     <td class="item__tab">jemima</td>
@@ -77,7 +77,7 @@ function addcontact() {
 
 
     for (let index = 0; index <mesInput.length; index++) {
-        mesInput[index].value= "";
+         mesInput[index].value= "";
         
     }
 }
