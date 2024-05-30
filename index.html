@@ -8,7 +8,7 @@
 </head>
 <body>
     <!--Mon grand conteneur contact avec toutes les sections-->
-    <div class = bigContainer>
+    <div class = "main">
 
         <header class="container__header container__header--width" id="header">
             
@@ -36,10 +36,10 @@
            
         </header>
 
-<!--**************************debut de ma section left***************************************-->
+<!--**************************    debut de ma section left***************************************-->
         <div class="mySections">    
                 <section class="sectionleft" id="sideBar">
-                 <!--le div qui contient  le menu bur-->
+                 <!--le div qui contient  le menu burger-->
         
    
                    <button onclick="showNewContactSection('newContactSection')" class = "buttun__creerContact containerDeroule__left-BGblue  containerDeroule__left-borderRadius">
@@ -55,7 +55,7 @@
                             <div>contacts</div>
                             <div id="contactNumber"> </div>
                         </button> -->
-                       <div class = "containerDeroule__left containerDeroule__left-BGblue containerDeroule__left--bgbluecont containerDeroule__left--bold" > 
+                       <div class = "containerDeroule__left buttonContactList containerDeroule__left-BGblue containerDeroule__left--bgbluecont containerDeroule__left--bold" > 
                            <img src="./myIcons/contact.png" alt="" class="left__icon">
                            <div>contacts</div>
                            <div id="contactNumber"> </div>
@@ -84,12 +84,9 @@
                             <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="left__icon"  width="1em" height="1em" viewBox="0 0 24 24"><path fill="black" d="M7.616 20q-.672 0-1.144-.472T6 18.385V6H5V5h4v-.77h6V5h4v1h-1v12.385q0 .69-.462 1.153T16.384 20zM17 6H7v12.385q0 .269.173.442t.443.173h8.769q.23 0 .423-.192t.192-.424zM9.808 17h1V8h-1zm3.384 0h1V8h-1zM7 6v13z"/></svg></div>
                             <div>corbeille</div>
                        </div> 
-                       <div class="containerDeroule__left containerDeroule__left--spaceBetwin">
-                        <div>Libellés</div>
-                        <img src="./myIcons/plus.png" alt=""class="left__icon " >
-                           
-                           
-                           
+                       <div class="containerDeroule__left containerDeroule__left--spaceBetwin  "  >
+                            <div>Libellés</div>
+                            <img src="./myIcons/plus.png" alt=""class="left__icon button__libelle " id="Libellé__botton" onclick="showlibeleesection('champLibele')">   
                        </div>
                    </div>
    
@@ -97,93 +94,151 @@
                 </section>
    
                 <!--************************************fin de ma section left****************************************-->
+
+                 <!--$$$$$$$$$$$$$$$$$$$$$$$$$$ debut de la section liste contact $$$$$$$$$$$$$$$$-->
                 <div id="rightSection" class="rightSection">
-                    <section class="sectionRight" id="mainSection" >  
-                        <div class=" contact__right">Contacts</div> 
-                        <div class ="container__right">
-                            <ul class="item">
-                                <li class="item__list">Titre</li>
-                                <li class="item__list">E-mail</li>
-                                <li class="item__list" >Numero de téléphone</li>
-                                <li class="item__list">Fonction et Entreprise</li>
-                                <li class="item__list">Libellés</li>
-                                <!-- <li class="item__list"><img src="./myIcons/printer.png" alt=""></li>
-                                <li class="item__list"><img src="./myIcons/share.png" alt=""></li>
-                                <li class="item__list"><img src="./myIcons/menu3.png" alt=""></li>  -->
-                        
-                            </ul>
-                           <!-- <div class="icon"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="currentColor" d="M18 3H6v4h12m1 5a1 1 0 0 1-1-1a1 1 0 0 1 1-1a1 1 0 0 1 1 1a1 1 0 0 1-1 1m-3 7H8v-5h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3"/></svg></div>
-                           <div class="icon"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 20 20"><path fill="currentColor" d="M10.354 2.146a.5.5 0 0 0-.708 0l-4.5 4.5a.5.5 0 1 0 .708.708L9.5 3.707V12.5a.5.5 0 0 0 1 0V3.707l3.646 3.647a.5.5 0 0 0 .708-.708zM4 9.5a.5.5 0 0 0-1 0V14a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V9.5a.5.5 0 0 0-1 0V14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/></svg></div>
-                           <div class="icon"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="8" cy="2.5" r=".75"/><circle cx="8" cy="8" r=".75"/><circle cx="8" cy="13.5" r=".75"/></g></svg></div>  -->
-                        </div>
-                       <div class="ligne"></div>
-                       <div class ="container__right__champsContact">
-                           
-                           <div class="myContact"></div>
-       
-                       </div>
-                       
-                    </section>
-                    <section class="hideNewContactSection" id="newContactSection">
-                        <form id="form">   
-                            <div class="newcontact--profil">
-                                <img src="./myIcons/silouhaiteProfil.png" alt="" class="newcontactProfil--profil">
-                                <input type="file" name="profil" id="profil" placeholder="+">
-                                <span>
-                                    <img src="./myIcons/plus.png" alt="" class="newcontactPlus--profil ">
-                                </span> 
-                                
-                
-                                
-                            </div>
-                
+                    <section class="contactList" id="mainSection" >  
+                    
+                        <table class ="table container__right">
+                            <caption class="caption">
+                                Contacts
+                            </caption>
+                            <tr class="table__lign table__lign--ligne">
+                                <th class="item__tab">Titre</th>
+                                <th class="item__tab">E-mail</th>
+                                <th class="item__tab">Numero de téléphone</th>
+                                <th class="item__tab">Fonction et Entreprise</th>
+                                <th class="item__tab">Libellés</th>
+
+                            </tr>
+                            <tr class="table__lign">
+                                <td class="item__tab">jemima</td>
+                                <td class="item__tab">jemiMukanza@gmail.com</td>
+                                <td class="item__tab">0810640653</td>
+                                <td class="item__tab">DG</td>
+                                <td class="item__tab">hiegbzds,bl;</td>
+                            </tr>
                             
-                
-                            <div class="divNewForm">
-                                <input type="submit" placeholder="+ Libellé" id="submitionButton" name="submitionButton">
-                            </div>
-                            <div class="divNewForm">
-                                <div><input type="text" placeholder="Prénom" class="inputForm inputForm--separateur " name="firsName" id="firsName "></div>
-                                <div><input type="text" placeholder="Nom" class="inputForm" name="Name" id="Name"></div>
+                        </table>
+                    </section>
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$ fin de la section list contact  $$$$$$$$$$$$$$$$-->
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$debut  de la section new contact $$$$$$$$$$$$$$$$-->
+                    <section class="hideNewContactSection  " id="newContactSection">
+                        <form id="form" >
+                            <div class="header__newContact">
+                                <img src="./myIcons/arrow.png" alt="" class="arrow__newContact">
+                                <div class="header__newContact--starButton">
+                                    <img src="./myIcons/star.png" alt="">
+                                    <button class="submit__newContactbutton submissionButtonNew" id="submissionButton" name="submissionButton">Enregistrer</button> 
+                                </div>
                                 
                             </div>
-                            <div class="divNewForm">
-                                <div><input type="text" placeholder="Entreprise"class="inputForm inputForm--separateur" name="Entreprise" id="Entreprise"></div>
-                                <div><input type="text" placeholder="Fonction"class="inputForm"></div>
-                               
+                             
+                            <div class="newcontact--profil hideNewContactSection__padding">
+                                <img src="./myIcons/silouhaiteProfil.png" class="newcontactProfil--profil">
+                                <img src="./myIcons/plusBlanc.png" alt="" class="newcontact__plus--profil">
                             </div>
-                            <div class="divNewForm ">
-                                <div><input type="email" placeholder="Email"class="inputForm inputForm--separateur" id="Email" name="Email"></div>
-                                <div class = " divNewForm--BGblue  divNewForm--borderRadius inputForm divNewForm--form">
-                                    <img src="./myIcons/plus.png" alt="" class="left__icon">
-                                    <div>Ajouter une adresse e-mail</div>
+
+                            <div class="divNewForm hideNewContactSection__padding ">
+                                <input type="text" id="libellee" class="divNewForm__libeleeform" placeholder="+ Libellé">
+                                <!-- <button id="libellee" class="divNewForm__libeleeform"> <img src="./myIcons/blue plus.svg" alt=""> Libellé</button> -->
+                            </div>
+                            <div class="divNewForm hideNewContactSection__padding">
+                                <div >
+                                    <img src="./myIcons/contact.png" alt="" class="imgContact">
+                                </div>
+                                
+                                <div>
+                                    <div><input type="text" placeholder="Prénom" class="inputForm inputForm--separateur " name="firsName" id="firsName"></div>
+                                    <div><input type="text" placeholder="Nom" class="inputForm" name="Name" id="name"></div>
+                                </div>
+                               
+
+                            </div>
+                            <div class="divNewForm hideNewContactSection__padding">
+                                <div>
+                                    <img src="./myIcons/Entreprise.png" alt="" class="imgContact">
+                                </div>
+                                <div>
+                                    <div><input type="text" placeholder="Entreprise"class="inputForm inputForm--separateur" name="Entreprise" id="entreprise"></div>
+                                    <div><input type="text" placeholder="Fonction"class="inputForm" name="Fonction" id="fonction"></div>
+                               
+                                </div>
+                                
+                            </div>
+                            <div class="divNewForm hideNewContactSection__padding">
+                                <div>
+                                    <img src="./myIcons/mail.png" alt="" class="imgContact">
+                                </div>
+                                <div>
+                                    <div>
+                                        <input type="email" placeholder="Email"class="inputForm inputForm--separateur" id="email" name="Email">
+                                    </div>
+                                    <div class = " divNewForm--BGblue  divNewForm--borderRadius inputForm divNewForm--form">
+                                        <img src="./myIcons/plus.png" alt="" class="left__icon">
+                                        <div>Ajouter une adresse e-mail</div>
+                                    </div>
+                                
                                     
                                 </div>
                                 
                             </div>
                             
-                            <div class="divNewForm inputContry inputForm--separateur ">
-                                <select name="pays" id="" >
-                                    <option value="rdc"> RDcongo</option>
-                                    <option value="canada">Canada</option>
-                                    <option value="benin">benin</option>
-                                    <option value="state">USA</option>
-                                    <option value="angola">Angola</option>
-                                </select>
-                                <input type="number" name="" id="" placeholder="Téléphone " class="inputForm__phoneNumber inputForm">
+                            <div class="divNewForm inputContry inputForm--separateur hideNewContactSection__padding">
+                                <div>
+                                    <img src="./myIcons/call.png" alt="">
+                                </div>
+                                <div class="FormZonePays inputForm inputForm--separateur">
+                                    <select name="pays" id="" >
+                                        <option value="rdc"> RDcongo</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="benin">benin</option>
+                                        <option value="state">USA</option>
+                                        <option value="angola">Angola</option>
+                                    </select>
+                                    <input type="number" name="" id="phone" placeholder="Téléphone " class="inputForm__phoneNumber inputForm inputForm--separateur">
+
+                                </div>
                             </div>
                             
                             
                 
                         </form>
                     </section>
-                </div>
-                
-       
 
+                    <!--$$$$$$$$$$$$$$$$$$$$$$$$$$fin de la section new contact $$$$$$$$$$$$$$$$-->
+
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$debut de la section libellée $$$$$$$$$$$$$$$$-->
+                    <section class="libeleeSection libeleeSectionDisplay " id="champLibele">
+                        <h1>Créer un libellé</h1>
+                        <form class="inputLibellée" >
+                            <div>
+                                <fieldset class="inputLibellée__champ">
+                                    <legend>Nouveau libellé</legend>
+                                    <input type="text" class="inputLibelee" id="libellee" >
+                                </fieldset>
+                                  
+                            </div>
+
+                        </form>
+                        <div class="libeléeOption">
+                            <p  id="annulLibelee"  class="libeléeOption__p libeléeOption__cancel " onclick="cancelLibeleeSection('champLibele')">Non, ne rien faire</p>
+                            <p id="saveNewlibelee" class="libeléeOption__p libeléeOption__enregistre" onclick="savelibelee('saveNewlibelee')">Enregistrer</p>
+                        </div>
+
+
+                    </section>
+
+                     <!--$$$$$$$$$$$$$$$$$$$$$$$$$$fin de la section new libellee $$$$$$$$$$$$$$$$-->
+                </div>
 
         </div>
+
     </div>
     <script src="./index.js"></script>
 </body>
 </html>
+

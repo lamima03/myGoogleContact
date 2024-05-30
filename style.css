@@ -77,7 +77,6 @@ body{
     color:rgb (25,91,197) ;
 }
 .sectionleft{
-    background: yellow;
     width:15%;
 }
 .containerDeroule__left--bold{
@@ -104,6 +103,7 @@ body{
         align-items: center;
         width: 10rem;
         margin: 1rem;
+        border: none;
 
     }
     .containerDeroule__options{
@@ -121,7 +121,7 @@ body{
 .mySections{
     display: flex;
     width:100%;
-    background: red;
+   
     
 }
 .item{
@@ -136,28 +136,53 @@ body{
 
     
 }
-.item__list{
-    list-style: none;
-    margin-right: 8rem;
-    width: 100%;
-   
+.table{
+    border-collapse: collapse;
 }
-
-.container__right{
-    width: 100%;
+.caption{
+    font-weight: bold;
+    font-size:x-large;
+    position: relative;
+    float: left;
+    margin: 1rem;
+    color: rgb(69, 71, 70);
 }
-.container__right{
+.table__lign--ligne{
+    border-bottom: 2px solid rgb(233, 233, 233);
+}
+.table__lign{
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    align-items: center;
+   
+ 
+    height: 2rem;
+
     
-    width: 100;
+
+}
+
+
+.item__tab{
+    
+    width:20%;
+    font-weight: lighter;
+    text-align: start;
+ 
+}
+
+
+.container__right{
+width: 100%;
     
 }
-.sectionRight{
+.contactList{
    background:rgb(255, 255, 255);
    margin-left:3px;
    width:100%;
    border-radius: 7px;
+   
 }
 .contact__right{
     margin-left: 1rem;
@@ -170,25 +195,44 @@ body{
 .rightSection {
     height: 100%;
     width: 85%;
+    background: white;
+    border-radius: 10px;
+    
     
     /* border: solid,black, 1rem; */
+}
+
+
+.rightSection__width{
+    width: 100%;
 }
 
 /*********************************************** fin     my  section right *********************************************************/
 /****************************************   debut new contact      ****************************************/
 .newcontact{
     width: 50%;
+    margin-left: 2rem;
 }
 .newForm{
     width: 80%;
    
 }
+.newcontact--profil{
+    
+
+
+
+}
 .inputForm{
     height: 2rem;
-    width: 100%;
+    
+    width: 40rem;
+
 }
 .divNewForm{
     margin-bottom: 1rem;
+    display: flex;
+    
     
 }
 .inputForm--separateur{
@@ -212,6 +256,9 @@ body{
     
     
 }
+.FormZonePays{
+    display: flex;
+}
 .inputForm__contrycode{
     width: 20%;
 
@@ -219,35 +266,126 @@ body{
 }
 .inputContry {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     
-
 }
 .newcontact--profil{
-    display: block;
+    display: flex;
+    position: relative;
     width: 200px;
     height: 200px;
     align-items: center;
     text-align:center ;
     justify-content: center;
     border-radius: 50%;
-    
-    
+        
 }
 .newcontactProfil--profil{
     width: 100%;
-    
-    
-    
+    border-radius: 50%;
+    margin-bottom: 2rem;
+       
+}
+
+.newcontact__plus--profil{
+    width: 40px;
+    height:40px;
+    background: rgb(39, 86, 201);
+    border-radius: 50%;
+    position: relative;
+    right: 50px;
+    top: 45px;
+    border: solid white 5px;
+
 }
 .newcontactPlus--profil{
     width: 28px;
     height:28px;
     
 }
-
-/****************************************   fin new contact      ****************************************/
-.bigContainer{
+.submit__newContactbutton{
+    background: rgb(227, 227, 227);
+    width: 7rem;
+    height:2rem;
+    border-radius: 17px;
+    border: none;
+    color: rgb(168, 168, 168);
+}
+.header__newContact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
+    margin-bottom: 2rem;
+    width: 55%;
 
 }
+.header__newContact--starButton{
+    display: flex;
+    align-items: center;
+}
+
+.hideNewContactSection__padding{
+    padding-left: 3rem;
+    
+}
+
+.divNewForm__libeleeform{
+    width: 5rem;
+    height: 1.5rem;
+    border: solid rgb(168, 168, 168) 1px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/****************************************   fin new contact      ****************************************/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  debut libellee section   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+.libeleeSection{
+    width: 30%;
+    background: rgb(239, 243, 250);
+    background:white;
+    border-radius: 30px;
+    
+}
+    
+    
+
+.libeleeSectionDisplay{
+    display: none;
+}
+
+
+.inputLibellée{
+    border-color: rgb(86, 125, 212);
+    color: rgb(86, 125, 212);
+    padding-bottom: 2rem;
+
+}
+
+.libeléeOption{
+    color: rgb(86, 125, 212);
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+
+
+}
+.libeléeOption__p{
+    padding-right: 1rem;
+}
+.button__libelle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.inputLibellée__champ{
+    color-interpolation-filters: beige;
+}
+.inputLibelee{
+    width: 100%;
+    border: none;
+}
+ 
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$  fin libellee section   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
