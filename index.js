@@ -13,6 +13,7 @@ const inputs = form.elements;
 let formulaire = null;
 const createContactForm = document.getElementById('form');
 const mesInput = document.querySelectorAll(".inputForm")
+let compte = 0;
 
 
 
@@ -36,6 +37,7 @@ const showNewContactSection = (target) => {
     cible.classList.remove('hideNewContactSection');
 }
 // removeEventListener()
+
 function addcontact() {
     // <tr class="table__lign">
     //     <td class="item__tab">jemima</td>
@@ -61,7 +63,7 @@ function addcontact() {
     tdPhone.textContent = phoneInput.value;
 
     const tdFonction = document.createElement("td");
-    tdFonction.setAttribute("class", "item__tab");
+    tdFonction.setAttribute("class", "item__tab")
     tdFonction.textContent = fonctionInput.value + " " + entrepriseInput.value;
 
     const tdLibelee = document.createElement("td");
@@ -74,8 +76,7 @@ function addcontact() {
     container__right.appendChild(trItem);
 
     leftSection.append(tdLibelee);
-
-
+    compte++
     for (let index = 0; index <mesInput.length; index++) {
          mesInput[index].value= "";
         
