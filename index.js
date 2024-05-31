@@ -6,6 +6,7 @@ const emailInput = document.querySelector("#email");
 const phoneInput = document.querySelector("#phone");
 const libeleeInput = document.querySelector("#libellee");
 let leftSection = document.querySelector(".sectionleft");
+const rightSection = document.querySelector(".rightSection")
 const buttonContactList = document.querySelector(".buttonContactList");
 const submissionButton = document.querySelector(".submissionButtonNew");
 let form = document.getElementById('form');
@@ -17,12 +18,15 @@ let compte = 0;
 
 
 
+
 //menu burger
 const hideSideBar = (target) => {
     let cible = document.getElementById(target);
     const isHide = cible.classList.contains('hideSection');
     if (isHide) {
         cible.classList.remove("hideSection");
+        rightSection.classList.add("rightSectionWith")
+
 
     }
     else {
@@ -100,6 +104,7 @@ const showlibeleesection = (target) => {
     newLibellee.classList.remove("libeleeSectionDisplay");
     const cible = document.getElementById(target);
     cible.classList.add('libeleeSection');
+    cible.classList.add("rightSectionWith")
 
 
 }
