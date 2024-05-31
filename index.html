@@ -13,7 +13,10 @@
         <header class="container__header container__header--width" id="header">
             
             <div class="contact__header container__header--width">
-                <img src="./myIcons/burger.png" alt="" onclick="hideSideBar('sideBar')" class="header__icon">
+                <span title="menu principal">
+                    <img src="./myIcons/burger.png" alt="" onclick="hideSideBar('sideBar')" class="header__icon" >
+                </span>
+                
                 <img src="./myIcons/blueContact.png" alt="" class="imgContact">
                 <spn>Contact</span>
             </div>
@@ -29,11 +32,7 @@
             
             <img src="./myIcons/menu grid.png" alt="" class="header__icon">
               
-                <span></span>
             </div>
-                    
-    
-           
         </header>
 
 <!--**************************    debut de ma section left***************************************-->
@@ -142,7 +141,7 @@
                             </div>
 
                             <div class="divNewForm hideNewContactSection__padding ">
-                                <input type="text" id="libellee" class="divNewForm__libeleeform" placeholder="+ Libellé">
+                                <input type="text" id="libellee" class="divNewForm__libeleeform inputForm" placeholder="+ Libellé">
                                 <!-- <button id="libellee" class="divNewForm__libeleeform"> <img src="./myIcons/blue plus.svg" alt=""> Libellé</button> -->
                             </div>
                             <div class="divNewForm hideNewContactSection__padding">
@@ -151,8 +150,8 @@
                                 </div>
                                 
                                 <div>
-                                    <div><input type="text" placeholder="Prénom" class="inputForm inputForm--separateur " name="firsName" id="firsName"></div>
-                                    <div><input type="text" placeholder="Nom" class="inputForm" name="Name" id="name"></div>
+                                    <div><input type="text" placeholder="Prénom" class="inputForm inputForm--separateur " name="firsName" id="firsName" required ></div>
+                                    <div><input type="text" placeholder="Nom" class="inputForm" name="Name" id="name" required></div>
                                 </div>
                                
 
@@ -226,11 +225,14 @@
                         </form>
                         <div class="libeléeOption">
                             <p  id="annulLibelee"  class="libeléeOption__p libeléeOption__cancel " onclick="cancelLibeleeSection('champLibele')">Non, ne rien faire</p>
-                            <p id="saveNewlibelee" class="libeléeOption__p libeléeOption__enregistre" onclick="savelibelee('saveNewlibelee')">Enregistrer</p>
+                            <p id="saveNewlibelee " class="libeléeOption__p libeléeOption__enregistre " onclick="savelibelee('sectionleft')">Enregistrer</p>
                         </div>
 
 
                     </section>
+                    <div class="labelLibelee showlabel">
+                        <img src="./myIcons/label.png" alt="">
+                    </div>
 
                      <!--$$$$$$$$$$$$$$$$$$$$$$$$$$fin de la section new libellee $$$$$$$$$$$$$$$$-->
                 </div>

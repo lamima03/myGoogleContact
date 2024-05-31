@@ -6,6 +6,7 @@ const emailInput = document.querySelector("#email");
 const phoneInput = document.querySelector("#phone");
 const libeleeInput = document.querySelector("#libellee");
 let leftSection = document.querySelector(".sectionleft");
+const rightSection = document.querySelector(".rightSection")
 const buttonContactList = document.querySelector(".buttonContactList");
 const submissionButton = document.querySelector(".submissionButtonNew");
 let form = document.getElementById('form');
@@ -13,6 +14,8 @@ const inputs = form.elements;
 let formulaire = null;
 const createContactForm = document.getElementById('form');
 const mesInput = document.querySelectorAll(".inputForm")
+let compte = 0;
+
 
 
 
@@ -22,6 +25,8 @@ const hideSideBar = (target) => {
     const isHide = cible.classList.contains('hideSection');
     if (isHide) {
         cible.classList.remove("hideSection");
+        rightSection.classList.add("rightSectionWith")
+
 
     }
     else {
@@ -36,6 +41,7 @@ const showNewContactSection = (target) => {
     cible.classList.remove('hideNewContactSection');
 }
 // removeEventListener()
+
 function addcontact() {
     // <tr class="table__lign">
     //     <td class="item__tab">jemima</td>
@@ -45,37 +51,36 @@ function addcontact() {
     //     <td class="item__tab">hiegbzds,bl;</td>
     // </tr>
     // console.log("addcontact :",formulaire)
-    const tr__item = document.createElement('tr');
-    tr__item.setAttribute("class", "table__lign");
+    const trItem = document.createElement('tr');
+    trItem.setAttribute("class", "table__lign");
 
-    const td__nomComplet = document.createElement("td");
-    td__nomComplet.setAttribute("class", "item__tab")
-    td__nomComplet.textContent = firstNameInput.value + " " + nameInput.value ; 
+    const tdNomComplet = document.createElement("td");
+    tdNomComplet.setAttribute("class", "item__tab")
+    tdNomComplet.textContent = firstNameInput.value + " " + nameInput.value ; 
 
-    const td__Email = document.createElement("td");
-    td__Email.setAttribute("class", "item__tab")
-    td__Email.textContent = emailInput.value;
+    const tdEmail = document.createElement("td");
+    tdEmail.setAttribute("class", "item__tab")
+    tdEmail.textContent = emailInput.value;
 
-    const td__phone = document.createElement("td");
-    td__phone.setAttribute("class", "item__tab")
-    td__phone.textContent = phoneInput.value;
+    const tdPhone = document.createElement("td");
+    tdPhone.setAttribute("class", "item__tab");
+    tdPhone.textContent = phoneInput.value;
 
-    const td__fonction = document.createElement("td");
-    td__fonction.setAttribute("class", "item__tab")
-    td__fonction.textContent = fonctionInput.value + " " + entrepriseInput.value;
+    const tdFonction = document.createElement("td");
+    tdFonction.setAttribute("class", "item__tab")
+    tdFonction.textContent = fonctionInput.value + " " + entrepriseInput.value;
 
-    const td__libelee = document.createElement("td");
-    td__libelee.setAttribute("class", "item__tab")
-    td__libelee.textContent = libeleeInput.value;
+    const tdLibelee = document.createElement("td");
+    tdLibelee.setAttribute("class", "item__tab");
+    tdLibelee.textContent = libeleeInput.value;
 
     let container__right = document.querySelector('.container__right')
 
-    tr__item.append(td__nomComplet, td__Email, td__phone, td__fonction, td__libelee);
-    container__right.appendChild(tr__item);
+    trItem.append(tdNomComplet, tdEmail, tdPhone, tdFonction, tdLibelee);
+    container__right.appendChild(trItem);
 
-    leftSection.append(td__libelee)
-
-
+    leftSection.append(tdLibelee);
+    compte++
     for (let index = 0; index <mesInput.length; index++) {
          mesInput[index].value= "";
         
@@ -99,6 +104,7 @@ const showlibeleesection = (target) => {
     newLibellee.classList.remove("libeleeSectionDisplay");
     const cible = document.getElementById(target);
     cible.classList.add('libeleeSection');
+    cible.classList.add("rightSectionWith")
 
 
 }
@@ -113,10 +119,39 @@ const cancelLibeleeSection = () => {
     inputLibelee.value = '';
 
 }
-function deletelibeleeSection() {
-    const libeleeSection = document.querySelector(".main");
-    libeleeSection.classList.add("libeleeSection");
+const deletelibeleeSection = () =>{
+    const eleveChampsLibelee =document.querySelector(".libeleeSection");
+    eleveChampsLibelee.classList.add("libeleeSectionDisplay")
+    
 }
+
+const savelibelee = ()=>{
+    const valueLibelee = document.querySelector(".inputLibelee")
+    const monLibelee = document.createElement("div");
+    monLibelee.setAttribute("class", "libeleeform")
+    // const monLabel = document.querySelector(".showlabel")
+    // monLabel.classList.remove("labelLibelee")
+    if (valueLibelee.value !== " " &&  valueLibelee.value !== leftSection.childNodes){
+        monLibelee.textContent = valueLibelee.value ; 
+    leftSection.append(monLibelee); 
+        console.log(monLibelee);
+    valueLibelee.value="";
+    deletelibeleeSection();
+    }
+    else{
+        deletelibeleeSection();
+    }
+   
+    
+    
+    
+
+}
+
+
+
+
+
 
 
 
@@ -129,6 +164,8 @@ createContactForm.addEventListener('submit', (event) => {
     // console.log(formulaire);
     addcontact()
 })
+
+
 
 buttonContactList.addEventListener("click", showMyListContact);
 

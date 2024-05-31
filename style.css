@@ -131,6 +131,7 @@ body{
     background:white;
     width: 100%;
     padding: 14px;
+
    
     
 
@@ -206,6 +207,9 @@ width: 100%;
 .rightSection__width{
     width: 100%;
 }
+.rightSectionWith{
+    width: 100%;
+}
 
 /*********************************************** fin     my  section right *********************************************************/
 /****************************************   debut new contact      ****************************************/
@@ -217,12 +221,12 @@ width: 100%;
     width: 80%;
    
 }
-.newcontact--profil{
+/* .newcontact--profil{
     
 
 
 
-}
+} */
 .inputForm{
     height: 2rem;
     
@@ -352,7 +356,7 @@ width: 100%;
     
     
 
-.libeleeSectionDisplay{
+.libeleeSectionDisplay, .labelLibelee{
     display: none;
 }
 
